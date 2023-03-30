@@ -1,0 +1,2 @@
+# practice_JavaScript
+JavaScriptの勉強のために写経したりしたものを格納
