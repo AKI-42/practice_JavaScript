@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>カウントボタンを作る</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      id="cntBtn"
+      value="カウントダウン　0"
+      onclick="onBtn()"
+    />
+    <script>
+      var cnt = 0;
+      var btn = document.getElementById('cntBtn');
+
+      function onBtn() {
+        cnt++;
+        btn.value = 'カウントダウン　' + cnt;
+      }
+    </script>
+  </body>
+</html>
