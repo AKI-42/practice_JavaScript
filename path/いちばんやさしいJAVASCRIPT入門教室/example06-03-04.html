@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+      td {
+        border: 1px solid;
+        width: 450px;
+        height: 100px;
+      }
+    </style>
+    <title>国名を入力して国旗を変える</title>
+  </head>
+  <body>
+    <table>
+      <caption id="cap">
+        国名
+      </caption>
+      <tr>
+        <td id="top"></td>
+      </tr>
+      <tr>
+        <td id="middle"></td>
+      </tr>
+      <tr>
+        <td id="bottom"></td>
+      </tr>
+    </table>
+    <br />
+    <input type="button" value="国名を入力する" onclick="changeCol()" />
+    <script>
+      function changeCol() {
+        var cap = document.getElementById('cap');
+        var cel_t = document.getElementById('top');
+        var cel_m = document.getElementById('middle');
+        var cel_b = document.getElementById('bottom');
+
+        var country = prompt(
+          'どの国旗にしますか？\nロシア、ルクセンブルク、リトアニアのいずれかを入力してください。',
+          ''
+        );
+
+        cap.textContent = country;
+        if (country == 'ロシア') {
+          cel_t.style.backgroundColor = 'white';
+          cel_m.style.backgroundColor = 'navy';
+          cel_b.style.backgroundColor = 'red';
+        } else if (country == 'ルクセンブルク') {
+          cel_t.style.backgroundColor = 'red';
+          cel_m.style.backgroundColor = 'white';
+          cel_b.style.backgroundColor = 'deepskyblue';
+        } else if (country == 'リトアニア') {
+          cel_t.style.backgroundColor = 'gold';
+          cel_m.style.backgroundColor = 'green';
+          cel_b.style.backgroundColor = 'red';
+        } else {
+          alert(
+            '入力できる国名はロシア、ルクセンブルク、リトアニアのいずれかです。'
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
