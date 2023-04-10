@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        border: solid 1px;
+        text-align: center;
+      }
+    </style>
+    <title>配列を使おう</title>
+  </head>
+  <body>
+    <table id="arrayTBL"></table>
+
+    <script>
+      var SOSU = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+
+      var aryTbl = document.getElementById('arrayTBL');
+      var row = aryTbl.insertRow(-1);
+      for (var i = 0; i < 10; i++) {
+        var cell = row.insertCell(-1);
+        cell.textContent = SOSU[i];
+      }
+    </script>
+  </body>
+</html>

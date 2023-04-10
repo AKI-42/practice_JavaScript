@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>テーブルでforをテスト</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        border: solid 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="testTBL"></table>
+
+    <script>
+      var tstTbl = document.getElementById('testTBL');
+      var row = tstTbl.insertRow(-1);
+      for (var i = 0; i < 3; i++) row.insertCell(-1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>innerHTMLとtextContentの違い</title>
+  </head>
+  <body>
+    <div id="testHTML"></div>
+    <div id="testTEXT"></div>
+
+    <script>
+      var divHTML = document.getElementById('testHTML');
+      var divTEXT = document.getElementById('testTEXT');
+      divHTML.innerHTML =
+        '<span style="color: blue; font-size: 2em;">innerHTMLで書き換える</span>';
+      divTEXT.textContent =
+        '<span style="color: blue; font-size: 2em;">innerHTMLで書き換える</span>';
+      divHTML.style.backgroundColor = 'silver';
+      divTEXT.style.backgroundColor = 'gold';
+    </script>
+  </body>
+</html>

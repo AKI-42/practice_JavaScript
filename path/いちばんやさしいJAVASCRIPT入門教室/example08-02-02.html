@@ -1,0 +1,45 @@
+<!DOCTYPE html>>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 120px;
+        height: 40px;
+        border: solid 1px;
+        text-align: center;
+      }
+    </style>
+    <title>配列を使おう</title>
+  </head>
+  <body>
+    <table id="arrayTBL">
+      <caption>
+        回鍋肉の材料
+      </caption>
+    </table>
+
+    <script>
+      var SHOKUZAI = ['豚肉', 'キャベツ', 'ピーマン', '長ネギ', '合わせ調味料'];
+      var NEDAN = [420, 200, 150, 120, 248];
+
+      var aryTbl = document.getElementById('arrayTBL');
+
+      var row = aryTbl.insertRow(-1);
+      for (var i = 0; i < 5; i++) {
+        var cell = row.insertCell(-1);
+        cell.style.backgroundColor = 'pink';
+        cell.textContent = SHOKUZAI[i];
+      }
+
+      var row = aryTbl.insertRow(-1);
+      for (var i = 0; i < 5; i++) {
+        var cell = row.insertCell(-1);
+        cell.textContent = NEDAN[i];
+      }
+    </script>
+  </body>
+</html>
