@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>オブジェクトのサンプル</title>
+  </head>
+  <body>
+    <span>コンソールのログを確認して下さい</span>
+    <script>
+      function drinkClass(meisho, youki, nedan, honsu) {
+        this.name = meisho;
+        this.container = youki;
+        this.price = nedan;
+        this.num = honsu;
+        this.proceeds = nedan * honsu;
+      }
+
+      var drink = [];
+      drink[0] = new drinkClass('コーヒー', 'スチール缶', 120, 80);
+      drink[1] = new drinkClass('オレンジジュース', 'アルミ缶', 130, 42);
+      drink[2] = new drinkClass('ミネラルウォーター', 'ペットボトル', 120, 30);
+      drink[3] = new drinkClass('コーラ', 'ペットボトル', 150, 55);
+
+      for (var i = 0; i < 4; i++) {
+        console.log(drink[i].name + 'の1月の売上額は' + drink[i].proceeds);
+      }
+    </script>
+  </body>
+</html>

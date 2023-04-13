@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>オブジェクトのサンプル</title>
+  </head>
+  <body>
+    <span>コンソールのログを確認して下さい</span>
+    <script>
+      var drink_name = [
+        'コーヒー',
+        'オレンジジュース',
+        'ミネラルウォーター',
+        'コーラ',
+      ];
+      var drink_container = [
+        'スチール缶',
+        'アルミ缶',
+        'ペットボトル',
+        'ペットボトル',
+      ];
+      var drink_price = [120, 130, 120, 150];
+      var drink_num = [80, 42, 30, 55];
+
+      var drink_proceeds = [];
+      for (var i = 0; i < 4; i++) {
+        drink_proceeds[i] = drink_price[i] * drink_num[i];
+        console.log(drink_name[i] + 'の1月の売上額は' + drink_proceeds[i]);
+      }
+    </script>
+  </body>
+</html>

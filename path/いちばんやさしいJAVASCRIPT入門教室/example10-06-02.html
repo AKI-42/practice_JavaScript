@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>オブジェクトのサンプル</title>
+  </head>
+  <body>
+    <span>コンソールのログを確認して下さい</span>
+    <script>
+      function Member(namae, nenrei, seibetsu, shokugyo) {
+        this.name = namae;
+        this.age = nenrei;
+        this.gender = seibetsu;
+        this.occupation = shokugyo;
+      }
+
+      Member.prototype.toshitoru = function (val) {
+        this.age += val;
+      };
+
+      Member.prototype.wakagaeru = function (val) {
+        this.age -= val;
+      };
+
+      Member.prototype.toshinosa = function (who) {
+        var val = this.age - who.age;
+        window.alert(this.name + 'と' + who.name + 'の年齢差は' + val);
+      };
+
+      var GENDER = ['男性', '女性'];
+
+      var human = [];
+      human[0] = new Member('山本　大介', 42, 0, '会社員');
+      human[1] = new Member('山本　美咲', 37, 1, '主婦');
+      human[2] = new Member('山本　拓也', 6, 0, '中学生');
+      human[3] = new Member('山本　さくら', 0, 1, '小学生');
+      human[4] = new Member('ももこ', 0, 1, '猫');
+
+      for (var i = 0; i < 5; i++) {
+        console.log(human[i].name + 'の職業は' + human[i].occupation);
+      }
+      human[0].toshinosa(human[1]);
+      human[2].toshinosa(human[3]);
+    </script>
+  </body>
+</html>
