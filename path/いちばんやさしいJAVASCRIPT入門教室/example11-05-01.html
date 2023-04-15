@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>YouTubeのムービーを組み込む</title>
+  </head>
+  <body>
+    <div id="player"></div>
+    <br />(C)2009-2017 KEMCO/WorldWideSoftware<br />
+    <script>
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      function onYouTubeIframeAPIReady() {
+        var player = new YT.Player('player', {
+          height: '540',
+          width: '960',
+          videoId: '8enxUCTuXXs',
+          events: {
+            onReady: onPlayerReady,
+          },
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playerVideo();
+      }
+
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+    </script>
+  </body>
+</html>
