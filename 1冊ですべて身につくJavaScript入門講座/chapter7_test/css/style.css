@@ -1,0 +1,92 @@
+@charset 'UTF-8';
+
+/*
+LOADING
+================================================ */
+#loading {
+  /* background-color: var(--light-grey); */
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+}
+#loading-screen {
+  /* background-color: var(--light-green); */
+  background-color: blue;
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  translate: 0 100vh;
+}
+#loading p {
+  font-size: 2rem;
+  font-family: var(--oswald-font);
+}
+
+/*
+SLIDE MENU
+================================================ */
+/* 開閉ボタン */
+.btn-menu {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 4;
+  padding: 0.5rem 1rem;
+  /* border: 1px solid var(--brown); */
+  border: 1px solid brown;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  transition: 0.4s;
+}
+.btn-menu svg {
+  /* fill: var(--brown); */
+  fill: brown;
+  margin-top: 0.25rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* 閉じるボタン */
+#menu-close {
+  border: 1px solid brown;
+}
+#menu-close svg {
+  fill: brown;
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  padding: 8rem 2rem 2rem;
+  width: max(32vw, 20rem);
+  height: 100vh;
+  /* background-color: var(--brown); */
+  background-color: brown;
+  box-shadow: 0 0 2rem brown;
+  box-shadow: 0 0 2rem brown;
+  font-family: var(--oswald-font);
+  translate: 100vw;
+}
+.menu-list {
+  list-style: none;
+}
+.menu-list li {
+  margin: 1.5rem 0;
+  opacity: 0;
+  color: aliceblue;
+}
+.menu-list a {
+  /* color: var(--light-green); */
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
